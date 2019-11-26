@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Only call zfs-auto-backup if it's available
+which zfs-auto-backup > /dev/null || exit 0
+
+exec zfs-auto-backup
+

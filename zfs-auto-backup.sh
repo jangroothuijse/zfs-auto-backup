@@ -29,7 +29,7 @@ if [ ! "$HOST" = "localhost" ]
 fi
 
 # for each source snapshot, ordered by age ASC.
-for snap in $(zfs list -t snapshot | awk '{print $1}' | grep "${SRC}@zfs-auto-snap_${TYPE}" | sort); do
+for snap in $(zfs list -t snapshot | awk '{print $1}' | grep "${SRC}@zfs-auto-snap_${TYPE}"| sort); do
 	echo "Backing up $snap"
 	base=$(basename "$snap")
 
